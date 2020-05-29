@@ -4,7 +4,7 @@ import 'package:mobx_project/controller.dart';
 
 class MyHomePage extends StatelessWidget {
   
-  final controller = Controller();
+   final controller = Controller();
 
   @override
   Widget build(BuildContext context) {
