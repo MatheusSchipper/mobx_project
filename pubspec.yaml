@@ -25,6 +25,9 @@ dependencies:
     sdk: flutter
   mobx: ^1.2.1
   flutter_mobx: ^1.1.0
+  email_validator: ^1.0.4
+  regexed_validator: ^1.0.4
+  cpfcnpj: ^1.0.3
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,10 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_project/controller.dart';
+import 'package:mobx_project/form_page.dart';
 
 class MyHomePage extends StatelessWidget {
-  
-   final controller = Controller();
+  final controller = Controller();
 
   @override
   Widget build(BuildContext context) {
@@ -22,23 +23,34 @@ class MyHomePage extends StatelessWidget {
                 decoration: InputDecoration(labelText: "Nome"),
                 onChanged: controller.mudarNome,
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               TextField(
                 decoration: InputDecoration(labelText: "Sobrenome"),
                 onChanged: controller.mudarSobrenome,
               ),
-              SizedBox(height: 20,),
-              Observer(builder: (_) {
-                return Text(controller.nomeCompleto);
-              },),
+              SizedBox(
+                height: 20,
+              ),
+              Observer(
+                builder: (_) {
+                  return Text(controller.nomeCompleto);
+                },
+              ),
+              RaisedButton(
+                child: Text("Formulário"),
+                onPressed: () {
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => FormPage()));
+                },
+              )
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () 
-        {
-        },
+        onPressed: () {},
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),

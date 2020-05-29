@@ -1,0 +1,2 @@
+Geração de código: $ flutter pub run build_runner build
+Geração de código automática após salvar arquivo:  flutter pub run build_runner watch
