@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:get_it/get_it.dart';
 import 'package:mobx_project/form_controller.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 
 class BodyWidget extends StatelessWidget {
 
@@ -19,8 +20,8 @@ class BodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final formController = Provider.of<FormController>(context);
-
+    //final formController = Provider.of<FormController>(context);
+    final formController = GetIt.I.get<FormController>();
     return Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
